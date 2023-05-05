@@ -18,11 +18,11 @@ function moveWolf() {
     // move the wolf to the other side of the river
     if (wolf === 'left') {
       document.getElementById('wolf').remove();
-      document.querySelector('.side2:right').insertAdjacentHTML('beforeend', '<div class="item" id="wolf">Wolf</div>');
+      document.querySelector('.side2').insertAdjacentHTML('beforeend', '<div class="item" id="wolf">Wolf</div>');
     } else {
       wolf = 'right';
       document.getElementById('wolf').remove();
-      document.querySelector('.side:left').insertAdjacentHTML('beforeend', '<div class="item" id="wolf">Wolf</div>');
+      document.querySelector('.side').insertAdjacentHTML('beforeend', '<div class="item" id="wolf">Wolf</div>');
     }
     checkWinCondition();
     if (isGameOver()) {
@@ -37,11 +37,11 @@ function moveGoat() {
   if (goat === 'left') {
    let goat = 'right';
     document.getElementById('goat').remove();
-    document.querySelector('.side2:right').insertAdjacentHTML('beforeend', '<div class="item" id="goat">Goat</div>');
+    document.querySelector('.side2').insertAdjacentHTML('beforeend', '<div class="item" id="goat">Goat</div>');
   } else {
     goat = 'left';
     document.getElementById('goat').remove();
-    document.querySelector('.side:left').insertAdjacentHTML('beforeend', '<div class="item" id="goat">Goat</div>');
+    document.querySelector('.side').insertAdjacentHTML('beforeend', '<div class="item" id="goat">Goat</div>');
   // check if the goat and the wolf are on the same side of the river
   if (goat === wolf) {
     alert('You cannot leave the goat alone with the wolf!');
@@ -73,11 +73,11 @@ function moveCabbage() {
     if (cabbage === 'left') {
      let cabbage = 'right';
       document.getElementById('cabbage').remove();
-      document.querySelector('.side2:right').insertAdjacentHTML('beforeend', '<div class="item" id="cabbage">Cabbage</div>');
+      document.querySelector('.side2').insertAdjacentHTML('beforeend', '<div class="item" id="cabbage">Cabbage</div>');
     } else {
       cabbage = 'left';
       document.getElementById('cabbage').remove();
-      document.querySelector('.side:left').insertAdjacentHTML('beforeend', '<div class="item" id="cabbage">Cabbage</div>');
+      document.querySelector('.side').insertAdjacentHTML('beforeend', '<div class="item" id="cabbage">Cabbage</div>');
     }
     checkWinCondition();
   }
